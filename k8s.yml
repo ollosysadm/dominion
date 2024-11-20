@@ -1,0 +1,18 @@
+kind: Pod
+apiversion: v1
+metadata:
+  name: hello
+  Namespace: dev
+  label: 
+    app: myapp
+    tier: fe
+spec:
+  containers:
+  - name: myapp
+    image: mylandmarktech/hello
+    ports:
+    - containerPort: 80
+  - name: logmgt
+    image: mylandmarktech/log
+    ports:
+    -containerPort: 8000 
